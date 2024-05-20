@@ -1,31 +1,32 @@
+// Modules and libraries:
 import { Link } from "react-router-dom";
+
+// Assets and components:
 import TransparentLogo from '../../assets/images/logo-transparent.png'
-import './HeaderStyle.js'
+import { Navbar, Navigation, NavImg, NavItem } from "./HeaderStyle.js";
 
 const Header = () => {
   return (
-    <header>
-      <nav className="navbar">
-        <Link className="nav-img" to="/">
-          <img src={TransparentLogo} alt="Logo da banda Rush" />
-        </Link>
+    <Navbar>
+      <Link className="nav-img" to="/">
+        <NavImg src={TransparentLogo} alt="Logo da banda Rush" />
+      </Link>
 
-        <ul className="navigation">
-          <li className="nav-item">
-            <Link to="/">Início</Link>
-          </li> 
-          <li className="nav-item">
-            <Link to="/sobre">Sobre o Rush</Link>
-          </li> 
-          <li className="nav-item">
-            <Link to="/discografia">Discografia</Link>
-          </li> 
-          <li className="nav-item">
-            <Link to="/contato">Contato</Link>
-          </li> 
-        </ul>
-      </nav>
-    </header>
+      <Navigation>
+        <NavItem>
+          <Link to="/" className="routerLink">Início</Link>
+        </NavItem>
+        <NavItem>
+          <Link to="/sobre" className="routerLink">Sobre</Link>
+        </NavItem> 
+        <NavItem>
+          <Link to="/discografia" className="routerLink">Discografia</Link>
+        </NavItem> 
+        <NavItem>
+          <Link to="/contato" className="routerLink">Contato</Link>
+        </NavItem> 
+      </Navigation>
+    </Navbar>
   );
 }
 
