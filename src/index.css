@@ -1,7 +1,7 @@
 :root {
     --bright-red: hsl(0, 84%, 46%);
     --white: hsl(0, 0%, 94%);
-    --very-dark-grey: rgb(39, 39, 39);
+    --very-dark-grey: rgb(50, 50, 50);
 }
 
 @font-face {

@@ -6,9 +6,9 @@ export const Navbar = styled.nav `
   align-items: center;
   padding: 0 5rem;
   width: auto;
-  height: 96px;
+  height: 6rem;
   background-color: var(--bright-red);
-  box-shadow: 0px 5px 25px var(--very-dark-grey);
+  box-shadow: 0px 0px 16px var(--very-dark-grey);
 `;
 
 export const NavImg = styled.img `
