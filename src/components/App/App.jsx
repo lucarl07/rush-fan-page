@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import AboutRush from "../MainPages/AboutRush";
 import Contact from "../MainPages/Contact";
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/discografia" element={<Discography/>} />
           <Route path="/contato" element={<Contact/>} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   );
