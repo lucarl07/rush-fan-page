@@ -1,7 +1,14 @@
 :root {
+    /* Primary: */
     --bright-red: hsl(0, 84%, 46%);
-    --very-dark-grey: hsl(0, 0%, 20%);
+    --brownish-red: hsl(0, 76%, 35%);
+    --chestnut: hsl(9, 53%, 37%);
+    --rosy-brown: hsl(9, 35%, 57%);
+    
+    /* Neutral: */
     --white: hsl(0, 0%, 94%);
+    --grey: hsl(0, 3%, 43%);
+    --very-dark-grey: hsl(0, 0%, 20%);
     --black: hsl(0, 0%, 10%);
 }
 
