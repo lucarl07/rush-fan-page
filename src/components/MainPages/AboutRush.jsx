@@ -1,5 +1,9 @@
 const AboutRush = () => {
-  return (<></>)
+  return (
+    <>
+      <h1>Conheça a história da lendária banda canadense</h1>
+    </>
+  )
 }
      
 export default AboutRush;
