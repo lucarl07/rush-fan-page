@@ -5,6 +5,7 @@ import AboutRush from "../MainPages/AboutRush";
 import Contact from "../MainPages/Contact";
 import Discography from "../MainPages/Discography";
 import Home from "../MainPages/Home";
+import Login from "../MainPages/Login";
 import "./App.css";
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/sobre" element={<AboutRush/>} />
           <Route path="/discografia" element={<Discography/>} />
           <Route path="/contato" element={<Contact/>} />
+          <Route path="/login" element={<Login/>} />
         </Routes>
         <Footer/>
       </BrowserRouter>

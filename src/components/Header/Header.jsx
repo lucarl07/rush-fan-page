@@ -25,6 +25,9 @@ const Header = () => {
         <NavItem>
           <Link to="/contato" className="routerLink">Contato</Link>
         </NavItem> 
+        <NavItem>
+          <Link to="/login" className="routerLink">Entrar</Link>
+        </NavItem>
       </Navigation>
     </Navbar>
   );
