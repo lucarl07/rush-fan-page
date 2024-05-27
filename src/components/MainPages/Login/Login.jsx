@@ -1,4 +1,5 @@
 import React from "react"
+import { Input } from "./LoginStyle"
 
 const Login = () => {
   const [email, setEmail] = React.useState("")
@@ -6,12 +7,14 @@ const Login = () => {
   
   const handleBlur = ({target}) => { validateField(target.value) }
   
-  function validateField(value, error) {
+  function validateField(value) {
+    const emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i
+
     if (value.length <= 0) {
       setErr("O campo não pode estar vazio!")
       return false;
-    } else if (!/\d{5}-\d{3}/.test(value)) {
-      setErr(error)
+    } else if (!emailRegex.test(value)) {
+      setErr("Verifique o E-mail e o preencha corretamente.")
       return false;
     } else {
       setErr(null)
@@ -23,7 +26,7 @@ const Login = () => {
     <form>
       <label htmlFor="inEmail">E-mail:</label> <br />
       <div>
-        <input 
+        <Input
           type="text"
           id="inEmail"
           value={email} 

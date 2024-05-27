@@ -5,7 +5,7 @@ import AboutRush from "../MainPages/AboutRush";
 import Contact from "../MainPages/Contact";
 import Discography from "../MainPages/Discography";
 import Home from "../MainPages/Home";
-import Login from "../MainPages/Login";
+import Login from "../MainPages/Login/Login";
 import "./App.css";
 
 const App = () => {
