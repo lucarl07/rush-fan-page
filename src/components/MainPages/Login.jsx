@@ -1,43 +1,37 @@
 import React from "react"
 
 const Login = () => {
-  const [cep, setCep] = React.useState('')
+  const [email, setEmail] = React.useState("")
   const [err, setErr] = React.useState(null)
   
-  const handleBlur = ({target}) => { validaCep(target.value) }
+  const handleBlur = ({target}) => { validateField(target.value) }
   
-  function validaCep(value) {
+  function validateField(value, error) {
     if (value.length <= 0) {
       setErr("O campo não pode estar vazio!")
       return false;
     } else if (!/\d{5}-\d{3}/.test(value)) {
-      setErr("Digite um CEP válido, contendo 5 números, 1 hífen (-) e mais 3 números. \nExemplo: 00000-000")
-      return false
+      setErr(error)
+      return false;
     } else {
       setErr(null)
-      return true
+      return true;
     }
   }
 
   return (
-    <form  style={{
-      display: "flex",
-      flexDirection: "column",
-      width: "350px",
-      gap: "5px",
-      padding: "3rem"
-    }}>
-      <label htmlFor="inCEP">CEP:</label> <br />
+    <form>
+      <label htmlFor="inEmail">E-mail:</label> <br />
       <div>
         <input 
           type="text"
-          id="inCEP"
-          value={cep} 
+          id="inEmail"
+          value={email} 
           onBlur={handleBlur}
-          onChange={({target}) => setCep(target.value)} 
+          onChange={({target}) => setEmail(target.value)} 
         />
         {err && <p>{err}</p>}
-        <button className="btnSend" style={{ width: "75px" }}>
+        <button className="btnSend">
           Enviar
         </button>
       </div>
